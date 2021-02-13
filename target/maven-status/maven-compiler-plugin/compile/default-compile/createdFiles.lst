@@ -1,2 +1,8 @@
-com\mycompany\nemaapusproject\NewFXMain.class
+javaFxControllers\AdminServiceAddingController.class
+javaFxControllers\HomeController$1.class
+pojos\ParlorServices.class
 javaFxControllers\HomeController.class
+pojos\Appointment.class
+com\mycompany\nemaapusproject\NewFXMain.class
+pojos\Service.class
+dbOperations\DbServices.class
