@@ -1,5 +1,6 @@
 package dbOperations;
 
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import pojos.Appointment;
@@ -46,4 +47,14 @@ public class DbServices {
         }
     }
 
+    public synchronized List<String> getServicesList() {
+        try {
+            entityManager.getTransaction().begin();
+            List<String> servicesList = entityManager.createQuery("SELECT t.serviceName FROM Service t").getResultList();
+            entityManager.getTransaction().commit();
+            return servicesList;
+        } catch (Exception e) {
+            return null;
+        }
+    }
 }
