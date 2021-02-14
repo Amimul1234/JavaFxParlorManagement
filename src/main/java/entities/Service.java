@@ -1,26 +1,29 @@
-package pojos;
+package entities;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table
-public class ParlorServices implements Serializable {
+public class Service implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String serviceName;
-    private Double serviceCharge;
+    private Double servicePrice;
 
-    public ParlorServices() {
+    public Service() {
     }
 
-    public ParlorServices(Integer id, String serviceName, Double serviceCharge) {
+    public Service(Integer id, String serviceName, Double servicePrice) {
         this.id = id;
         this.serviceName = serviceName;
-        this.serviceCharge = serviceCharge;
+        this.servicePrice = servicePrice;
     }
 
     public Integer getId() {
@@ -39,12 +42,12 @@ public class ParlorServices implements Serializable {
         this.serviceName = serviceName;
     }
 
-    public Double getServiceCharge() {
-        return serviceCharge;
+    public Double getServicePrice() {
+        return servicePrice;
     }
 
-    public void setServiceCharge(Double serviceCharge) {
-        this.serviceCharge = serviceCharge;
+    public void setServicePrice(Double servicePrice) {
+        this.servicePrice = servicePrice;
     }
 
 }

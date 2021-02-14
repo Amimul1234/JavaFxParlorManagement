@@ -13,7 +13,7 @@
 }
 .root {
     -fx-font-size: 30;
-    -fx-background-image: url("../HomeImages/background.jpg");
+    -fx-background-image: url("background.jpg");
     -fx-background-size: cover;
 }
 .textBox {
@@ -35,4 +35,22 @@
     -fx-font-color: silver;
     -fx-border-color: silver;
     -fx-background-color: white;
+}
+.table-view {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-padding: 50 15 50 15;
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: white;
+    -fx-border-color: #4dffc3;
+}
+.hbox {
+    -fx-background-color: rgba(255, 255, 255, 0.5);
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+.vbox {
 }

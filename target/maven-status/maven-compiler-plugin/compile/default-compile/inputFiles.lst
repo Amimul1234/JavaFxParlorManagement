@@ -1,7 +1,12 @@
+H:\Nema Apu\NemaApusProject\src\main\java\entities\Appointment.java
+H:\Nema Apu\NemaApusProject\src\main\java\entities\Admin.java
+H:\Nema Apu\NemaApusProject\src\main\java\javaFxControllers\HomeAppointmentController.java
+H:\Nema Apu\NemaApusProject\src\main\java\javaFxControllers\ServicesController.java
 H:\Nema Apu\NemaApusProject\src\main\java\dbOperations\DbServices.java
-H:\Nema Apu\NemaApusProject\src\main\java\com\mycompany\nemaapusproject\NewFXMain.java
+H:\Nema Apu\NemaApusProject\src\main\java\entities\TimeSlots.java
+H:\Nema Apu\NemaApusProject\src\main\java\javaFxControllers\AdminTimeSlotsController.java
+H:\Nema Apu\NemaApusProject\src\main\java\entities\Service.java
+H:\Nema Apu\NemaApusProject\src\main\java\com\mycompany\termProject\NewFXMain.java
+H:\Nema Apu\NemaApusProject\src\main\java\entities\CustomerInvoice.java
 H:\Nema Apu\NemaApusProject\src\main\java\javaFxControllers\AdminServiceAddingController.java
-H:\Nema Apu\NemaApusProject\src\main\java\pojos\Appointment.java
-H:\Nema Apu\NemaApusProject\src\main\java\javaFxControllers\HomeController.java
-H:\Nema Apu\NemaApusProject\src\main\java\pojos\Service.java
-H:\Nema Apu\NemaApusProject\src\main\java\pojos\ParlorServices.java
+H:\Nema Apu\NemaApusProject\src\main\java\entities\Customer.java

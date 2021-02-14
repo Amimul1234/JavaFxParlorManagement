@@ -1,4 +1,4 @@
-package com.mycompany.nemaapusproject;
+package com.mycompany.termProject;
 
 import static org.junit.Assert.assertTrue;
 

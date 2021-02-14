@@ -1,4 +1,4 @@
-package com.mycompany.nemaapusproject;
+package com.mycompany.termProject;
 
 import java.io.IOException;
 import javafx.application.Application;

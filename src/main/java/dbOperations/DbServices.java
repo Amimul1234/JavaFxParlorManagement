@@ -3,8 +3,9 @@ package dbOperations;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
-import pojos.Appointment;
-import pojos.Service;
+import entities.Appointment;
+import entities.Service;
+import entities.TimeSlots;
 
 public class DbServices {
 
@@ -29,7 +30,7 @@ public class DbServices {
             entityManager.getTransaction().begin();
             entityManager.persist(appointment);
             entityManager.getTransaction().commit();
-            return "Successfully made an appoinment. Appointment number is: " + String.valueOf(appointment.getAppointmentId());
+            return "Successfully made an appoinment. Appointment number is: " + String.valueOf(appointment.getAppointmentNumber());
         } catch (Exception e) {
             return "Can not make an appointment, please try again";
         }
@@ -55,6 +56,43 @@ public class DbServices {
             return servicesList;
         } catch (Exception e) {
             return null;
+        }
+    }
+
+    public synchronized List<Service> getAllServicesRecords() {
+        try {
+            entityManager.getTransaction().begin();
+            List<Service> servicesList = entityManager.createQuery("SELECT t FROM Service t").getResultList();
+            entityManager.getTransaction().commit();
+            return servicesList;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public synchronized List<String> getTimeSlots() {
+        try {
+            entityManager.getTransaction().begin();
+            List<String> timeSlotLists = entityManager.createQuery("SELECT t.timeSlots FROM TimeSlots t").getResultList();
+            entityManager.getTransaction().commit();
+            return timeSlotLists;
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    public synchronized String saveTime(String text) {
+        TimeSlots timeSlots = new TimeSlots();
+
+        timeSlots.setTimeSlots(text);
+
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.persist(timeSlots);
+            entityManager.getTransaction().commit();
+            return "Successfully added time slot to database";
+        } catch (Exception e) {
+            return "Can not add time slot to database, please try again";
         }
     }
 }
